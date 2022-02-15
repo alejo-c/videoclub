@@ -2,18 +2,23 @@
 
 namespace App\Http\Controllers;
 
+// use Illuminate\Support\Facades\DB;
+use App\Models\Movie;
+
 class CatalogController extends Controller
 {
-	public function getIndex()	
+	public function getIndex() 
 	{
-		$movies = $this->loadMovies();
+		// $movies = DB::table('movies')->get();
+		$movies = Movie::all();
 		return view('catalog.index', ['movies' => $movies]);
 	}
 
 	public function getShow($id)
 	{
-		$movie = $this->loadMovies()[$id];
-		return view('catalog.show', ['id' => $id, 'movie' => $movie]);
+		// $movies = DB::table('movies')->where('id', $id)->get();
+		$movie = Movie::findOrFail($id);
+		return view('catalog.show', ['movie' => $movie]);
 	}
 
 	public function getCreate()
@@ -23,12 +28,8 @@ class CatalogController extends Controller
 
 	public function getEdit($id)
 	{
-		$movie = $this->loadMovies()[$id];
-		return view('catalog.edit', ['id' => $id, 'movie' => $movie]);
-	}
-
-	private function loadMovies()
-	{
-		return json_decode(file_get_contents(storage_path() . "/movies.json"), true)['movies'];
+		// $movies = DB::table('movies')->where('id', $id)->get();
+		$movie = Movie::findOrFail($id);
+		return view('catalog.edit', ['movie' => $movie]);
 	}
 }
