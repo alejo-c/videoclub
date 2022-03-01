@@ -62,6 +62,31 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+		## composer install
+		## npm install
+		## cp .env.example .env
+		## php artisan key:generate
+
+		# update routes
+		## php artisan cache:clear
+		## php artisan route:cache
+
+		# update config
+		## php artisan config:clear
+		## php artisan view:clear
+
+		# migration
+		## php artisan migrate:install
+		## php artisan make:migration create_table_name_table --create=table_name
+		## php artisan migrate:status
+		## php artisan migrate
+
+		# seed
+		## php artisan make:seeder UsersTableSeeder
+		## php artisan db:seed
+
+		# model
+		## php artisan make:model Movie
 
         'pgsql' => [
             'driver' => 'pgsql',

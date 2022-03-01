@@ -9,21 +9,16 @@ use Illuminate\Support\Facades\DB;
 class DatabaseSeeder extends Seeder
 {
 	private $movies;
-	/**
-	 * Seed the application's database.
-	 *
-	 * @return void
-	 */
+
 	public function run()
 	{
-		// \App\Models\User::factory(10)->create();
 		self::seedCatalog();
 		$this->command->info('Tabla catálogo inicializada con datos!');
 	}
 
 	public function seedCatalog()
 	{
-		$this->	movies = json_decode(file_get_contents(storage_path() . "/movies.json"), true)['movies'];
+		$this->movies = json_decode(file_get_contents(storage_path() . "/movies.json"), true)['movies'];
 		DB::table('movies')->delete();
 		foreach ($this->movies as $movie) {
 			$newMovie = new Movie;
