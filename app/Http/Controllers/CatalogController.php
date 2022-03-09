@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movie;
+use Illuminate\Http\Request;
 
 class CatalogController extends Controller
 {
-	public function getIndex() 
+	public function getIndex()
 	{
 		$movies = Movie::all();
 		return view('catalog.index', ['movies' => $movies]);
@@ -27,5 +28,36 @@ class CatalogController extends Controller
 	{
 		$movie = Movie::findOrFail($id);
 		return view('catalog.edit', ['movie' => $movie]);
+	}
+
+	public function postCreate(Request $req)
+	{
+		$movie = new Movie;
+		$movie->title = $req->input('title');
+		$movie->year = $req->input('year');
+		$movie->director = $req->input('director');
+		$movie->poster = $req->input('poster');
+		$movie->rented = false;
+		$movie->synopsis = $req->input('synopsis');
+		if ($movie->save()) {
+			return $this->getIndex();
+		} else {
+			return ['result' => 'error'];
+		}
+	}
+
+	public function putEdit(Request $req, $id)
+	{
+		$movie = Movie::findOrFail($id);
+		$movie->title = $req->input('title');
+		$movie->year = $req->input('year');
+		$movie->director = $req->input('director');
+		$movie->poster = $req->input('poster');
+		$movie->synopsis = $req->input('synopsis');
+		if ($movie->save()) {
+			return $this->getShow($id);
+		} else {
+			return ['result' => 'error'];
+		}
 	}
 }

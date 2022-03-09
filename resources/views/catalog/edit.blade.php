@@ -10,8 +10,10 @@
 			</div>
 
 			<div class="card-body" style="padding:30px">
-				<from>
+
+				<form action='{{ url("/catalog/edit/$movie->id") }}' method="POST">
 					{{ csrf_field() }}
+					{{ method_field('PUT') }}
 
 					<div class="form-group">
 						<label for="title">Título</label>
@@ -43,14 +45,14 @@
 							Modificar película
 						</button>
 
-						<a href=' {{ url("catalog/show/$movie->id" )	 }}' class="btn btn-light" style="padding:8px 131px;">
+						<a href='{{ url("catalog/show/$movie->id" ) }}' class="btn btn-light" style="padding:8px 131px;">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
 								<path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
 							</svg>
 							Volver
 						</a>
 					</div>
-				</from>
+					</from>
 			</div>
 		</div>
 	</div>
