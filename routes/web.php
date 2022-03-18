@@ -8,10 +8,10 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, "getHome"]);
 
 Route::get('catalog', [CatalogController::class, "getIndex"])
-	->middleware(['auth']);
+	->middleware(['auth'])->name("catalog");
 
 Route::get('catalog/show/{id}', [CatalogController::class, "getShow"])
-	->whereNumber("id")->middleware(["auth"]);
+	->whereNumber("id")->middleware(["auth"])->name("catalog/show");
 
 Route::get('catalog/create', [CatalogController::class, "getCreate"])
 	->middleware(['auth']);
@@ -19,9 +19,11 @@ Route::get('catalog/create', [CatalogController::class, "getCreate"])
 Route::get('catalog/edit/{id}', [CatalogController::class, "getEdit"])
 	->whereNumber("id")->middleware(["auth"]);
 
-Route::put("catalog/edit/{id}", [CatalogController::class, "putEdit"])->middleware(['auth']);
+Route::put("catalog/edit/{id}", [CatalogController::class, "putEdit"])
+	->whereNumber("id")->middleware(['auth'])->name("catalog/edit");
 
-Route::post("catalog/create", [CatalogController::class, "postCreate"])->middleware(['auth']);
+Route::post("catalog/create", [CatalogController::class, "postCreate"])
+	->middleware(['auth'])->name("catalog/create");
 
 require __DIR__ . '/auth.php';
 
@@ -37,6 +39,7 @@ require __DIR__ . '/auth.php';
 
 # update config
 ## php artisan config:clear
+## php artisan config:cache
 ## php artisan view:clear
 
 # migration

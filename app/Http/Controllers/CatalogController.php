@@ -40,7 +40,7 @@ class CatalogController extends Controller
 		$movie->rented = false;
 		$movie->synopsis = $req->input('synopsis');
 		if ($movie->save()) {
-			return $this->getIndex();
+			return redirect()->route("catalog");
 		} else {
 			return ['result' => 'error'];
 		}
@@ -55,7 +55,7 @@ class CatalogController extends Controller
 		$movie->poster = $req->input('poster');
 		$movie->synopsis = $req->input('synopsis');
 		if ($movie->save()) {
-			return $this->getShow($id);
+			return redirect()->route("catalog/show", ["id" => $id]);
 		} else {
 			return ['result' => 'error'];
 		}
