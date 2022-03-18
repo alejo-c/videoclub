@@ -15,13 +15,14 @@
 <body>
 
     @include('partials.navbar')
+	@include('sweetalert::alert')
 
     <div class="container">
         @yield('content')
     </div>
 
     <script src="{{ url('/assets/bootstrap/js/bootstrap.min.js') }}"></script>
-
+	@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 
 </html>

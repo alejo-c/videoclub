@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Alert;
 
 class CatalogController extends Controller
 {
@@ -55,6 +57,8 @@ class CatalogController extends Controller
 		$movie->poster = $req->input('poster');
 		$movie->synopsis = $req->input('synopsis');
 		if ($movie->save()) {
+			// Alert::success('Success Title', 'Success Message');
+			alert()->success('Title', 'Lorem Lorem Lorem');
 			return redirect()->route("catalog/show", ["id" => $id]);
 		} else {
 			return ['result' => 'error'];
