@@ -16,14 +16,23 @@ Route::get('catalog/show/{id}', [CatalogController::class, "getShow"])
 Route::get('catalog/create', [CatalogController::class, "getCreate"])
 	->middleware(['auth']);
 
+Route::post("catalog/create", [CatalogController::class, "postCreate"])
+	->middleware(['auth'])->name("catalog/create");
+
 Route::get('catalog/edit/{id}', [CatalogController::class, "getEdit"])
 	->whereNumber("id")->middleware(["auth"]);
 
 Route::put("catalog/edit/{id}", [CatalogController::class, "putEdit"])
 	->whereNumber("id")->middleware(['auth'])->name("catalog/edit");
 
-Route::post("catalog/create", [CatalogController::class, "postCreate"])
-	->middleware(['auth'])->name("catalog/create");
+Route::put("catalog/rent/{id}", [CatalogController::class, "putRent"])
+	->whereNumber("id")->middleware(['auth']);
+
+Route::put("catalog/return/{id}", [CatalogController::class, "putReturn"])
+	->whereNumber("id")->middleware(['auth']);
+
+Route::delete("catalog/delete/{id}", [CatalogController::class, "deleteMovie"])
+	->whereNumber("id")->middleware(['auth']);
 
 require __DIR__ . '/auth.php';
 

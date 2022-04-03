@@ -40,7 +40,8 @@ class CatalogController extends Controller
 		$movie->rented = false;
 		$movie->synopsis = $req->input('synopsis');
 		if ($movie->save()) {
-			return redirect()->route("catalog");
+			notify()->success("New movie '$movie->title' created!", 'Create movie');
+			return redirect('catalog');
 		} else {
 			return ['result' => 'error'];
 		}
@@ -55,7 +56,43 @@ class CatalogController extends Controller
 		$movie->poster = $req->input('poster');
 		$movie->synopsis = $req->input('synopsis');
 		if ($movie->save()) {
+			notify()->success("Movie '$movie->title' updated!", 'Update movie');
 			return redirect()->route("catalog/show", ["id" => $id]);
+		} else {
+			return ['result' => 'error'];
+		}
+	}
+
+	public function putRent($id)
+	{
+		$movie = Movie::findOrFail($id);
+		$movie->rented = true;
+		if ($movie->save()) {
+			notify()->success("Movie $movie->title rented", 'Rent movie');
+			return redirect()->route("catalog/show", ["id" => $id]);
+		} else {
+			return ['result' => 'error'];
+		}
+	}
+
+	public function putReturn($id)
+	{
+		$movie = Movie::findOrFail($id);
+		$movie->rented = false;
+		if ($movie->save()) {
+			notify()->success("Movie $movie->title returned", 'Return movie');
+			return redirect()->route("catalog/show", ["id" => $id]);
+		} else {
+			return ['result' => 'error'];
+		}
+	}
+
+	public function deleteMovie($id)
+	{
+		$movie = Movie::findOrFail($id);
+		if ($movie->delete()) {
+			notify()->success("Movie $movie->title deleted", 'Delete movie');
+			return redirect('catalog');
 		} else {
 			return ['result' => 'error'];
 		}

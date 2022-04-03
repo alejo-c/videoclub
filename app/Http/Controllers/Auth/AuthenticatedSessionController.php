@@ -32,6 +32,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+		notify()->success("User Logged", 'Login');
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 
@@ -49,6 +50,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
+		notify()->success("User unlogged", 'Logout');
         return redirect('/');
     }
 }

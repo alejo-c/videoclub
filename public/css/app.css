@@ -70,7 +70,7 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -78,7 +78,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-}
+} */
 
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
@@ -93,10 +93,10 @@ a {
 Add the correct font weight in Edge and Safari.
 */
 
-b,
+/* b,
 strong {
   font-weight: bolder;
-}
+} */
 
 /*
 1. Use the user's configured `mono` font family by default.
@@ -115,9 +115,9 @@ pre {
 Add the correct font size in all browsers.
 */
 
-small {
+/* small {
   font-size: 80%;
-}
+} */
 
 /*
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
@@ -162,36 +162,36 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: inherit; /* 1 */
-  color: inherit; /* 1 */
-  margin: 0; /* 2 */
-  padding: 0; /* 3 */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /*
 Remove the inheritance of text transform in Edge and Firefox.
 */
 
-button,
+/* button,
 select {
   text-transform: none;
-}
+} */
 
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Remove default button styles.
 */
 
-button,
+/* button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button; /* 1 */
-  background-color: transparent; /* 2 */
-  background-image: none; /* 2 */
-}
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+} */
 
 /*
 Use the modern Firefox focus style for all focusable elements.
@@ -266,7 +266,7 @@ summary {
 Removes the default spacing and border for appropriate elements.
 */
 
-blockquote,
+/* blockquote,
 dl,
 dd,
 h1,
@@ -280,7 +280,7 @@ figure,
 p,
 pre {
   margin: 0;
-}
+} */
 
 fieldset {
   margin: 0;
@@ -303,9 +303,9 @@ menu {
 Prevent resizing textareas horizontally by default.
 */
 
-textarea {
+/* textarea {
   resize: vertical;
-}
+} */
 
 /*
 1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
@@ -350,7 +350,7 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-img,
+/* img,
 svg,
 video,
 canvas,
@@ -358,19 +358,19 @@ audio,
 iframe,
 embed,
 object {
-  display: block; /* 1 */
-  vertical-align: middle; /* 2 */
-}
+  display: block;
+  vertical-align: middle;
+} */
 
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
-img,
+/* img,
 video {
   max-width: 100%;
   height: auto;
-}
+} */
 
 /*
 Ensure the default browser behavior of the `hidden` attribute.
@@ -380,7 +380,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-[type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
+/* [type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -395,7 +395,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-shadow: 0 0 #0000;
-}
+} */
 
 [type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
   outline: 2px solid transparent;
