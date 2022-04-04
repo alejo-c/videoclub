@@ -40,8 +40,8 @@ class DatabaseSeeder extends Seeder
 		$test_users = [
 			['name' => 'testuser1', 'email' => 'email1@test.com', 'password' => bcrypt('testpasswd')],
 			['name' => 'testuser2', 'email' => 'email2@test.com', 'password' => bcrypt('testpasswd')],
-			['name' => 'alejo', 'email' => 'email2@test.com', 'password' => bcrypt('testpasswd')],
-			['name' => 'nestor', 'email' => 'email2@test.com', 'password' => bcrypt('testpasswd')]
+			['name' => 'alejo', 'email' => 'alejo@mail.com', 'password' => bcrypt('testpasswd')],
+			['name' => 'nestor', 'email' => 'nestor@mail.com', 'password' => bcrypt('testpasswd')]
 		];
 		foreach ($test_users as $test_user) {
 			$new_user = new User;
