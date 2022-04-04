@@ -1,0 +1,275 @@
+{
+	"client": "Thunder Client",
+	"collectionName": "api-catalog",
+	"dateExported": "2022-04-04T20:34:57.808Z",
+	"version": "1.1",
+	"folders": [],
+	"requests": [
+		{
+			"containerId": "",
+			"sortNum": 10000,
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "*/*"
+				},
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.com)"
+				}
+			],
+			"colId": "b03c2d23-8c0b-442e-8a8e-4b5a74c6f2c1",
+			"name": "index",
+			"url": "http://127.0.0.1:8000/api/catalog/",
+			"method": "GET",
+			"modified": "2022-04-03T22:15:48.607Z",
+			"created": "2022-04-03T21:29:04.337Z",
+			"_id": "07e3bec1-98ec-434b-863a-3377409f63ab",
+			"params": [],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"username": "alejo@mail.com",
+					"password": "testpasswd"
+				}
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 20000,
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "*/*"
+				},
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.com)"
+				}
+			],
+			"colId": "b03c2d23-8c0b-442e-8a8e-4b5a74c6f2c1",
+			"name": "show",
+			"url": "http://127.0.0.1:8000/api/catalog/2",
+			"method": "GET",
+			"modified": "2022-04-04T20:30:25.526Z",
+			"created": "2022-04-03T21:52:39.670Z",
+			"_id": "d0ddcf96-284d-4db4-9e87-56a015d08507",
+			"params": [],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"username": "alejo@mail.com",
+					"password": "testpasswd"
+				}
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 28750,
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "*/*"
+				},
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.com)"
+				}
+			],
+			"colId": "b03c2d23-8c0b-442e-8a8e-4b5a74c6f2c1",
+			"name": "create",
+			"url": "http://127.0.0.1:8000/api/catalog/?title=El Maquinista&year=2004&director=Brad Anderson&poster=https://es.web.img2.acsta.net/medias/nmedia/18/67/08/53/20071009.jpg&synopsis=Trevor Reznik, un empleado de una fábrica, padece desde hace un año un grave problema de insomnio, un mal que él oculta y que le provoca terribles alucinaciones. Debido a la fatiga se ha deteriorado tanto su salud física como su salud mental. Repelidos por su aspecto físico, sus compañeros de trabajo primero le evitan, y después se volverán contra él cuando uno de ellos pierde un brazo en un accidente en el que Trevor se ve involucrado.",
+			"method": "POST",
+			"modified": "2022-04-04T20:30:22.470Z",
+			"created": "2022-04-04T16:39:51.445Z",
+			"_id": "91465b9b-a5fe-4963-a18b-3ca5cd088089",
+			"params": [
+				{
+					"name": "title",
+					"value": "El Maquinista",
+					"isPath": false
+				},
+				{
+					"name": "year",
+					"value": "2004",
+					"isPath": false
+				},
+				{
+					"name": "director",
+					"value": "Brad Anderson",
+					"isPath": false
+				},
+				{
+					"name": "poster",
+					"value": "https://es.web.img2.acsta.net/medias/nmedia/18/67/08/53/20071009.jpg",
+					"isPath": false
+				},
+				{
+					"name": "synopsis",
+					"value": "Trevor Reznik, un empleado de una fábrica, padece desde hace un año un grave problema de insomnio, un mal que él oculta y que le provoca terribles alucinaciones. Debido a la fatiga se ha deteriorado tanto su salud física como su salud mental. Repelidos por su aspecto físico, sus compañeros de trabajo primero le evitan, y después se volverán contra él cuando uno de ellos pierde un brazo en un accidente en el que Trevor se ve involucrado.",
+					"isPath": false
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"username": "alejo@mail.com",
+					"password": "testpasswd"
+				}
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 37500,
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "*/*"
+				},
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.com)"
+				}
+			],
+			"colId": "b03c2d23-8c0b-442e-8a8e-4b5a74c6f2c1",
+			"name": "edit",
+			"url": "http://127.0.0.1:8000/api/catalog/24?year=2014",
+			"method": "PUT",
+			"modified": "2022-04-04T20:30:48.468Z",
+			"created": "2022-04-03T23:26:59.820Z",
+			"_id": "babafa07-17fe-4cf5-9672-9b53a838212b",
+			"params": [
+				{
+					"name": "title",
+					"value": "El Maquinista",
+					"isDisabled": true,
+					"isPath": false
+				},
+				{
+					"name": "year",
+					"value": "2014",
+					"isPath": false
+				},
+				{
+					"name": "director",
+					"value": "Brad Anderson",
+					"isDisabled": true,
+					"isPath": false
+				},
+				{
+					"name": "poster",
+					"value": "https://es.web.img2.acsta.net/medias/nmedia/18/67/08/53/20071009.jpg",
+					"isDisabled": true,
+					"isPath": false
+				},
+				{
+					"name": "synopsis",
+					"value": "Trevor Reznik, un empleado de una fábrica, padece desde hace un año un grave problema de insomnio, un mal que él oculta y que le provoca terribles alucinaciones. Debido a la fatiga se ha deteriorado tanto su salud física como su salud mental. Repelidos por su aspecto físico, sus compañeros de trabajo primero le evitan, y después se volverán contra él cuando uno de ellos pierde un brazo en un accidente en el que Trevor se ve involucrado.",
+					"isDisabled": true,
+					"isPath": false
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"username": "alejo@mail.com",
+					"password": "testpasswd"
+				}
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 40000,
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "*/*"
+				},
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.com)"
+				}
+			],
+			"colId": "b03c2d23-8c0b-442e-8a8e-4b5a74c6f2c1",
+			"name": "rent",
+			"url": "http://127.0.0.1:8000/api/catalog/24/rent",
+			"method": "PUT",
+			"modified": "2022-04-04T20:30:53.013Z",
+			"created": "2022-04-03T23:28:45.715Z",
+			"_id": "3adda07e-ec05-4b62-a9ea-ee18fa987925",
+			"params": [],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"username": "alejo@mail.com",
+					"password": "testpasswd"
+				}
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 50000,
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "*/*"
+				},
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.com)"
+				}
+			],
+			"colId": "b03c2d23-8c0b-442e-8a8e-4b5a74c6f2c1",
+			"name": "return",
+			"url": "http://127.0.0.1:8000/api/catalog/24/return",
+			"method": "PUT",
+			"modified": "2022-04-04T20:30:56.352Z",
+			"created": "2022-04-03T23:28:47.294Z",
+			"_id": "f2eb6030-0151-4ff9-ba70-ba7bbd9c24d6",
+			"params": [],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"username": "alejo@mail.com",
+					"password": "testpasswd"
+				}
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 60000,
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "*/*"
+				},
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.com)"
+				}
+			],
+			"colId": "b03c2d23-8c0b-442e-8a8e-4b5a74c6f2c1",
+			"name": "delete",
+			"url": "http://127.0.0.1:8000/api/catalog/24",
+			"method": "DELETE",
+			"modified": "2022-04-04T20:31:01.926Z",
+			"created": "2022-04-04T20:20:31.123Z",
+			"_id": "7d873110-4e26-42db-8004-3513cff60c4d",
+			"params": [],
+			"auth": {
+				"type": "basic",
+				"basic": {
+					"username": "alejo@mail.com",
+					"password": "testpasswd"
+				}
+			},
+			"tests": []
+		}
+	]
+}
