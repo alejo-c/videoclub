@@ -52,7 +52,7 @@
 							Volver
 						</a>
 					</div>
-					</from>
+				</from>
 			</div>
 		</div>
 	</div>

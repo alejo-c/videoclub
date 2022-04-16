@@ -21,30 +21,30 @@
 				<strong>Estado:</strong>
 				Película
 				@if ( $movie->rented )
-				actualmente alquilada
+					actualmente alquilada
 				@else
-				disponible
+					disponible
 				@endif
 			</p>
 		</div>
 
 		<div class="d-inline">
 			@if ( $movie->rented )
-			<form method="POST" action='{{ url("catalog/return/$movie->id") }}' style="display: inline;">
-				{{ csrf_field() }}
-				{{ method_field('PUT') }}
-				<button class="btn btn-success" type="submit">
-					Devolver Película
-				</button>
-			</form>
+				<form method="POST" action='{{ url("catalog/return/$movie->id") }}' style="display: inline;">
+					{{ csrf_field() }}
+					{{ method_field('PUT') }}
+					<button class="btn btn-success" type="submit">
+						Devolver Película
+					</button>
+				</form>
 			@else
-			<form method="POST" action='{{ url("catalog/rent/$movie->id") }}' style="display: inline;">
-				{{ csrf_field() }}
-				{{ method_field('PUT') }}
-				<button class="btn btn-primary" type="submit">
-					Alquilar
-				</button>
-			</form>
+				<form method="POST" action='{{ url("catalog/rent/$movie->id") }}' style="display: inline;">
+					{{ csrf_field() }}
+					{{ method_field('PUT') }}
+					<button class="btn btn-primary" type="submit">
+						Alquilar
+					</button>
+				</form>
 			@endif
 
 			<a href='{{ url("catalog/edit/$movie->id" ) }}' class="btn btn-warning">

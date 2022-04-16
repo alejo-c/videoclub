@@ -7,8 +7,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, "getHome"]);
 
-Route::get('catalog', [CatalogController::class, "getIndex"])
-	->middleware(['auth'])->name("catalog");
+Route::get('catalog', [CatalogController::class, "getIndex"])->middleware(['auth'])->name("catalog");
 
 Route::get('catalog/show/{id}', [CatalogController::class, "getShow"])
 	->whereNumber("id")->middleware(["auth"])->name("catalog/show");
